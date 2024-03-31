@@ -22,15 +22,15 @@ function Modal({onClose}) {
 
         let isValid = true;
 
-        if(!username) {
-            alert("Please enter your username")
-            isValid = false;
-        }
+        // if(!username) {
+        //     alert("Please enter your username")
+        //     isValid = false;
+        // }
 
-        if(!email) {
-            alert("Invalid email. Please check your email address.")
-            isValid = false;
-        }
+        // if(!email) {
+        //     alert("Invalid email. Please check your email address.")
+        //     isValid = false;
+        // }
         
         if(!phone || phone.length !== 10) {
             alert("Invalid phone number. Please enter a 10-digit phone number.")
@@ -69,7 +69,8 @@ function Modal({onClose}) {
                 <form onSubmit={handleSubmit} className='form'>
                 <div className='form-group'>
                     <label htmlFor="username">Username:</label>
-                    <input 
+                    <input
+                    required 
                     type="text" 
                     id="username"
                     value={formData.username}
@@ -78,7 +79,8 @@ function Modal({onClose}) {
                 </div>
                 <div className='form-group'>
                     <label htmlFor="email">Email Address:</label>
-                    <input 
+                    <input
+                    required 
                     type="email" 
                     id="email"
                     value={formData.email} 
@@ -87,7 +89,8 @@ function Modal({onClose}) {
                 </div>
                 <div className='form-group'>
                     <label htmlFor="phone">Phone Number:</label>
-                    <input 
+                    <input
+                    required 
                     type="tel" 
                     id="phone"
                     value={formData.phone} 
@@ -96,7 +99,8 @@ function Modal({onClose}) {
                 </div>
                 <div className='form-group'>
                     <label htmlFor="dob">Date of Birth:</label>
-                    <input 
+                    <input
+                    required 
                     type="date" 
                     id="dob"
                     value={formData.dob}
